@@ -8,4 +8,4 @@ Through analysing the relationship between the transfer fees and the number of w
 
 
 Additionally, the source code in SQL, used to integrate and transform data, while R was used to visualise the insights for this project, can be found in the SQL and R folder.
-The cleansed data used to analyse can be found in the Data folder, while the report of 2828 words can be found in the Report folder.
+The cleansed data used to analyse can be found in the Data folder, while the report of 2684 words can be found in the Report folder.
