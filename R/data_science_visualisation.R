@@ -21,6 +21,9 @@ ggplot(season_23,
        aes(transfer_fee, win, colour=win))+ # Map wins to x-axis, transfer fee to y-axis, and color points by win count
   geom_point(position=position_jitter(w=0.5, h=0))+ # Add jittered points to reduce overplotting
   geom_smooth(method='lm', se=FALSE)+ # Add linear regression line without confidence interval
+  geom_text(aes(x=448.10, y=18, label='Chelsea Football Club'), vjust=-1, hjust=0.6)+ # Add text
+  geom_text(aes(x=241.10, y=28, label='Manchester City Football Club'), vjust=1, hjust=-0.05)+ # Add text
+  geom_text(aes(x=231.60, y=28, label='Arsenal Football Club'), hjust=1.05)+ # Add text
   labs(x='Transfer Fee (million Euro)', y='Winning', # Set axis labels
        title='Correlation between Transfer Fee and Winning (2023)', # Set plot title
        caption='Transfermarkt dataset', # Set data source caption
