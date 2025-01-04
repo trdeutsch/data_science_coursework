@@ -36,8 +36,8 @@ geom_line(aes(y=transfer_fee, col='Transfer Fee'))+ # Add line for transfer fees
 geom_line(aes(y=win, col='Winning'))+ # Add line for wins
 geom_point(aes(y=transfer_fee))+ # Add point for transfer fee
 geom_point(aes(y=win))+ # Add point for wins
-geom_text(aes(y=transfer_fee, label=round(transfer_fee)), vjust=-1)+ # Display transfer fee values on the line
-geom_text(aes(y=win, label=round(win)), vjust=-1.5)+ # Display winning values on the line
+geom_text(aes(y=transfer_fee, label=floor(transfer_fee)), vjust=-1)+ # Display transfer fee values on the line
+geom_text(aes(y=win, label=floor(win)), vjust=-1.5)+ # Display winning values on the line
 scale_y_continuous(trans='log', breaks=c(0, 100**4, 2*100**4))+ # Set logarithmic y-axis scale with specific breaks
 scale_x_continuous(breaks=seq(min(data['season']), max(data['season']), by=1))+ # Display all years on the x-axis
 scale_colour_manual(name='Metric', values=c('Transfer Fee'='darkred', 'Winning'='steelblue'))+ # Set custom colors for lines
